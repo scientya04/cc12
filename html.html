@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Numbers App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calls Counts</h1>
+
+    <!-- Real-Time Clock -->
+    <div id="clock" class="clock"></div>
+
+    <!-- Controls -->
+    <div class="controls">
+      <input type="number" id="number-input" placeholder="Enter number to continue" />
+      <button onclick="addNumber()">Add Number</button>
+      <input type="text" id="search-bar" placeholder="Search number..." oninput="filterNumbers()" />
+      <div id="date-time" class="date-time" onclick="openCalendar()">Date: <span id="current-date"></span></div>
+    </div>
+
+    <!-- Number Line -->
+    <div id="number-line"></div>
+  </div>
+
+  <!-- Calendar Modal -->
+  <div id="calendar-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeCalendar()">×</span>
+      <h2 id="calendar-header"></h2>
+      <div id="calendar"></div>
+    </div>
+  </div>
+
+  <!-- Toast Notification -->
+  <div id="toast" class="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
